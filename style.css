@@ -10,6 +10,7 @@ body {
 
 h1 {
     background: none;
+    text-align: center;
 }
   
 header {
@@ -33,20 +34,55 @@ header {
     grid-column: 3;
 }
 
-.main {
+main {
+  display: grid;
+  grid-row: 3;
+  grid-column: 2;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  border: solid 10px black;
+  gap: 20px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color:green;
+}
+
+.blue {
+  background-color:blue;
+}
+
+.yellow {
+  background-color: brown;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.orange {
+  background-color:orange;
+}
+
+/*
+main {
+    display: grid;
     grid-row: 3;
     grid-column: 2;
+    border: solid 10px black;
 }
 
 .board {
     display: grid;
-    grid-row: 3;
-    grid-column: 2;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: solid 2px;
+    grid-template-columns: 1fr 1fr;
+    border: solid 2px red;  
 }
-
+*/
 .play {
   grid-row: 4;
   grid-column: 2;
@@ -56,13 +92,13 @@ header {
   grid-row: 5;
   grid-column: 2 ;
 }
-
+/*
 .box {
   width: 150px;
   height: 150px;
-  border: solid red 2px;
+  border: solid rgb(114, 110, 110) 2px;
 }
-
+*/
 /*  
 main {
     grid-row: 2;
