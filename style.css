@@ -34,39 +34,147 @@ header {
     grid-column: 3;
 }
 
-main {
+.board {
   display: grid;
   grid-row: 3;
   grid-column: 2;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  border: solid 10px black;
-  gap: 20px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /*border: solid 10px black;*/
+  gap: 10px;
+  
 }
 
 .red {
-  background-color: red;
-}
-
-.green {
-  background-color:green;
+  display: grid;
+  grid-row: 1;
+  grid-column: 3;
+  justify-content: end;
+  align-content: center;
 }
 
 .blue {
-  background-color:blue;
+  display: grid;
+  grid-row: 1;
+  grid-column: 4;
+  justify-content: start;
+  align-content: center;
+}
+
+.green {
+  display: grid;
+  /* background-color:green; */
+  grid-row: 2;
+  grid-column: 3;
+  justify-content: end;
+  align-content: center;
 }
 
 .yellow {
-  background-color: brown;
+  display: grid;
+  /* background-color: yellow; */
+  grid-row: 2;
+  grid-column: 4;
+  justify-content: start;
+  align-content: center;
 }
 
 .pink {
-  background-color: pink;
+  display: grid;
+  /* background-color: pink; */
+  grid-row: 3;
+  grid-column: 3;
+  justify-content: end;
+  align-content: center;
 }
 
 .orange {
-  background-color:orange;
+  display: grid;
+  /* background-color:orange; */
+  grid-row: 3;
+  grid-column: 4;
+  justify-content: start;
+  align-content: center;
 }
+
+
+.redBtn {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+
+.redBtnShadow {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  box-shadow: 5px 10px 8px 5px #888888; 
+}
+
+.blueBtn {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+}
+.blueBtnShadow {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  box-shadow: 5px 10px 8px 5px #888888; 
+}
+
+.greenBtn {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+}
+.greenBtnShadow {
+  width: 150px;
+  height: 150px;
+  background-color:green;
+  box-shadow: 5px 10px 8px 5px #888888; 
+}
+
+.yellowBtn {
+  width: 150px;
+  height: 150px;
+  background-color:yellow;
+}
+
+.yellowBtnShadow {
+  width: 150px;
+  height: 150px;
+  background-color:yellow;
+  box-shadow: 5px 10px 8px 5px #888888; 
+}
+
+.orangeBtn {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+}
+
+.orangeBtnShadow {
+  width: 150px;
+  height: 150px;
+  background-color:orange;
+  box-shadow: 5px 10px 8px 5px #888888; 
+}
+
+
+.pinkBtn {
+  width: 150px;
+  height: 150px;
+  background-color:pink;
+}
+
+.pinkBtnShadow {
+  width: 150px;
+  height: 150px;
+  background-color:pink;
+  box-shadow: 5px 10px 8px 5px #888888; 
+}
+
 
 /*
 main {
@@ -93,6 +201,10 @@ main {
   grid-column: 2 ;
 }
 /*
+
+
+opacity: 0.6;
+  transition: 0.3s;
 .box {
   width: 150px;
   height: 150px;
