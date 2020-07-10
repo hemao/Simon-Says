@@ -6,6 +6,7 @@ body {
     display: grid;
     grid-template-rows: 80px 80px 1fr 80px 80px;
     grid-template-columns: 100px 1fr 100px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 h1 {
@@ -22,6 +23,10 @@ header {
 .score {
     grid-row: 2 ;
     grid-column: 2;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
 }
 
 .left {
@@ -40,7 +45,6 @@ header {
   grid-column: 2;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  /*border: solid 10px black;*/
   gap: 10px;
   
 }
@@ -175,22 +179,57 @@ header {
   box-shadow: 5px 10px 8px 5px #888888; 
 }
 
-
-/*
-main {
-    display: grid;
-    grid-row: 3;
-    grid-column: 2;
-    border: solid 10px black;
+.gamePlay {
+  display: grid;
+  grid-row: 4;
+  grid-column: 3 ;
+  justify-content: end;
+  align-content: center;
 }
 
-.board {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    border: solid 2px red;  
+#play {
+    background-color:  rgb(160, 85, 232);
+    border-color: burlywood;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 75px;
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
 }
-*/
+
+.gameReset {
+  display: grid;
+  grid-row: 4;
+  grid-column: 4 ;
+  justify-content: start;
+  align-content: center;
+}
+
+.reset {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+#reset {
+  background-color:  rgb(160, 85, 232);
+  border-color: burlywood;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 75px;
+  outline: none;
+  font-family: 'Orbitron', sans-serif;
+}
+
 .play {
   grid-row: 4;
   grid-column: 2;
