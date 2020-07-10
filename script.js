@@ -57,9 +57,9 @@ function reset(){
 }
 
 
-//highlights the button when clicked
+//When user clicks on the buttons to follow simon
 function highlightBtn(e){
-    console.log("in highlight function")
+    //console.log("in highlight function")
     let choice =  parseInt(e.target.getAttribute("id"));
     userChoice.push(choice)
     setTimeout(compareChoices, 1000 * round)
@@ -70,14 +70,12 @@ function compareChoices(){
 if(computerChoice.length !== 0){
     console.log("in compare choices function")
     let flag = true;
-    console.log("user choice" + userChoice.length)
-    console.log("computer choice" + computerChoice.length)
+    //console.log("user choice" + userChoice.length)
+    //console.log("computer choice" + computerChoice.length)
     if(userChoice.length === computerChoice.length){
         for(let i=0; i< userChoice.length; i++){
             console.log("in for loop")
             if(userChoice[i] !== computerChoice[i]){
-                //console.log(typeof userChoice[i] + "* comp - " + typeof computerChoice[i])
-                console.log("in if setting flag to false")
                 flag=false
                 break
             }
@@ -94,8 +92,11 @@ if(computerChoice.length !== 0){
     } else {
         score = score + 1
         document.querySelector("#points").innerText = "  " + score + " "
+        if(round == 4 & score == 4){
+            alert("Yay!! you won the game!")
+        }
         round = round + 1
-        if(round < maxrounds){
+        if(round <= maxrounds){
             document.querySelector("#level").innerText = " " + round
             console.log("Moving on to next level " + round)
         }
@@ -108,6 +109,7 @@ if(computerChoice.length !== 0){
             setTimeout(chooseColor, 1000 * 3 * i)
         }
     }
+  
 }
 }
 
@@ -124,7 +126,7 @@ function chooseColor(){
         document.querySelector(selectedBtn).classList.add(classToBeAdded)
         setTimeout(function(){
             document.querySelector(selectedBtn).classList.remove(classToBeAdded)}, 1000)
-
+            
 }
 
 
