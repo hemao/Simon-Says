@@ -2,10 +2,13 @@
 let colors = ["red", "green", "blue","yellow","orange", "pink"]
 let colorClass = ["redBtn", "greenBtn", "blueBtn","yellowBtn","orangeBtn", "pinkBtn"]
 let effect = ["redBtnShadow", "greenBtnShadow", "blueBtnShadow","yellowBtnShadow","orangeBtnShadow", "pinkBtnShadow"]
+
 let computerChoice = []
 let userChoice = []
+
 let round = 1
 let score = 0
+maxrounds = 4
 //grab the board to add colored boxes
 let main = document.querySelector("main")
 
@@ -71,10 +74,10 @@ if(computerChoice.length !== 0){
     console.log("computer choice" + computerChoice.length)
     if(userChoice.length === computerChoice.length){
         for(let i=0; i< userChoice.length; i++){
-            //console.log("in for loop")
+            console.log("in for loop")
             if(userChoice[i] !== computerChoice[i]){
                 //console.log(typeof userChoice[i] + "* comp - " + typeof computerChoice[i])
-                //console.log("in if setting flag to false")
+                console.log("in if setting flag to false")
                 flag=false
                 break
             }
@@ -92,16 +95,16 @@ if(computerChoice.length !== 0){
         score = score + 1
         document.querySelector("#points").innerText = "  " + score + " "
         round = round + 1
-        document.querySelector("#level").innerText = " " + round
-        console.log("Moving on to next level " + round)
+        if(round < maxrounds){
+            document.querySelector("#level").innerText = " " + round
+            console.log("Moving on to next level " + round)
+        }
     }
 
-    console.log("clearing arrays - preparing for next clean round")    
     computerChoice = []
     userChoice = []
-    if (round <= 5){
+    if (round <= maxrounds){
         for(let i=1; i<=round; i++){
-         //console.log("in for loop" + i)
             setTimeout(chooseColor, 1000 * 3 * i)
         }
     }
@@ -111,17 +114,16 @@ if(computerChoice.length !== 0){
 
 //computer chooses colors
 function chooseColor(){
-
-    console.log("in choose color function")
-    let colorIndex = getRandomInt(0,6)
-    let classToBeAdded = effect[colorIndex]
-    let selectedBtn = "div." + colors[colorIndex] + " button"
-    console.log(classToBeAdded)
-    computerChoice.push(colorIndex)
-    console.log("pushed " + colorIndex + "into computerChoice")
-    document.querySelector(selectedBtn).classList.add(classToBeAdded)
-    setTimeout(function(){
-        document.querySelector(selectedBtn).classList.remove(classToBeAdded)}, 1000)
+        console.log("in choose color function")
+        let colorIndex = getRandomInt(0,6)
+        let classToBeAdded = effect[colorIndex]
+        let selectedBtn = "div." + colors[colorIndex] + " button"
+        console.log(classToBeAdded)
+        computerChoice.push(colorIndex)
+        console.log("pushed " + colorIndex + "into computerChoice")
+        document.querySelector(selectedBtn).classList.add(classToBeAdded)
+        setTimeout(function(){
+            document.querySelector(selectedBtn).classList.remove(classToBeAdded)}, 1000)
 
 }
 
