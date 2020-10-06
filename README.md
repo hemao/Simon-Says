@@ -22,9 +22,10 @@ Simon chooses four colors. Player chooses colors in the same order
 Player wins when level four is completed!
 
 How to launch and start the game?
-Pull down the repository
-Open index.html
-Hit the play button. 
+
+Pull down the repository\
+Open index.html\
+Hit the play button.
 
 Or
 
