@@ -22,7 +22,16 @@ Simon chooses four colors. Player chooses colors in the same order
 Player wins when level four is completed!
 
 How to launch and start the game?
-
+Pull down the repository
 Open index.html
-Hit the play button. To reset the game at any point, hit the reset button.
+Hit the play button. 
+
+Or
+
+Goto https://hemao.github.io/Simon-Says/ hit the play button.
+
+To reset the game at any point, hit the reset button.
+
+
+
 
